@@ -1,7 +1,7 @@
 set :stage, :production
 set :rails_env, :production
 set :deploy_to, "/deploy/apps/blog"
-set :branch, :config_deploy
+set :branch, "master"
 server "13.229.136.10", user: "ubuntu", roles: %w(web app db)
 
 # server-based syntax
