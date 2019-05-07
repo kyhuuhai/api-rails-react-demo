@@ -3,6 +3,7 @@ set :rails_env, :production
 set :deploy_to, "/deploy/apps/blog"
 set :branch, "master"
 server "13.229.136.10", user: "ubuntu", roles: %w(web app db)
+set :ssh_options, { forward_agent: true }
 
 # server-based syntax
 # ======================

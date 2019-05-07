@@ -689,3 +689,512 @@
   INFO [f06ba755] Running /usr/bin/env echo "Branch master (at 07296b0ce13351b6caa04bba3e88509d6d254d7d) deployed as release 20190506094612 by krylot" >> /deploy/apps/blog/revisions.log as ubuntu@13.229.136.10
  DEBUG [f06ba755] Command: cd /deploy/apps/blog/releases && /usr/bin/env echo "Branch master (at 07296b0ce13351b6caa04bba3e88509d6d254d7d) deployed as release 20190506094612 by krylot" >> /deploy/apps/blog/revisions.log
   INFO [b153a47d] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-06 16:50:54 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [39b10df2] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.229.136.10
+ DEBUG [39b10df2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [360e324d] Finished in 0.740 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-blog-production-krylot.sh 0.0%
+  INFO Uploading /tmp/git-ssh-blog-production-krylot.sh 100.0%
+  INFO [b870c312] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-krylot.sh as ubuntu@13.229.136.10
+ DEBUG [b870c312] Command: /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-krylot.sh
+  INFO [bdb91ee4] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [83a88272] Running /usr/bin/env git ls-remote git@github.com:kyhuuhai/api-rails-react-demo.git HEAD as ubuntu@13.229.136.10
+ DEBUG [83a88272] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env git ls-remote git@github.com:kyhuuhai/api-rails-react-demo.git HEAD )
+ DEBUG [c86ff788] 	66dc9a69393804ef20112a49db109c77736f6a6b
+ DEBUG [c86ff788] 		HEAD
+  INFO [c86ff788] Finished in 2.752 seconds with exit status 0 (successful).
+  INFO [6150ab87] Running /usr/bin/env mkdir -p /deploy/apps/blog/shared /deploy/apps/blog/releases as ubuntu@13.229.136.10
+ DEBUG [6150ab87] Command: /usr/bin/env mkdir -p /deploy/apps/blog/shared /deploy/apps/blog/releases
+  INFO [a68b89b5] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [309bf20e] Running /usr/bin/env mkdir -p /deploy/apps/blog/shared/log /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/shared/public/system /deploy/apps/blog/shared/public/uploads as ubuntu@13.229.136.10
+ DEBUG [309bf20e] Command: /usr/bin/env mkdir -p /deploy/apps/blog/shared/log /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/shared/public/system /deploy/apps/blog/shared/public/uploads
+  INFO [98d2fcaf] Finished in 0.155 seconds with exit status 0 (successful).
+  INFO [298c56ad] Running /usr/bin/env mkdir -p /deploy/apps/blog/shared/config as ubuntu@13.229.136.10
+ DEBUG [298c56ad] Command: /usr/bin/env mkdir -p /deploy/apps/blog/shared/config
+  INFO [2e9f2156] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [1b92e506] Running [ -f /deploy/apps/blog/shared/config/database.yml ] as ubuntu@13.229.136.10
+ DEBUG [1b92e506] Command: [ -f /deploy/apps/blog/shared/config/database.yml ]
+ DEBUG [b8fbad67] Finished in 0.156 seconds with exit status 0 (successful).
+ DEBUG [a250265f] Running [ -f /deploy/apps/blog/shared/config/application.yml ] as ubuntu@13.229.136.10
+ DEBUG [a250265f] Command: [ -f /deploy/apps/blog/shared/config/application.yml ]
+ DEBUG [92f325ae] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [e3eebd60] Running [ -f /deploy/apps/blog/current/REVISION ] as ubuntu@13.229.136.10
+ DEBUG [e3eebd60] Command: [ -f /deploy/apps/blog/current/REVISION ]
+ DEBUG [9147e58a] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [d4834f53] Running /usr/bin/env cat /deploy/apps/blog/current/REVISION 2>/dev/null as ubuntu@13.229.136.10
+ DEBUG [d4834f53] Command: /usr/bin/env cat /deploy/apps/blog/current/REVISION 2>/dev/null
+ DEBUG [43505ad1] 	07296b0ce13351b6caa04bba3e88509d6d254d7d
+ DEBUG [43505ad1] 	
+ DEBUG [43505ad1] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [864c2056] Running [ -f /deploy/apps/blog/repo/HEAD ] as ubuntu@13.229.136.10
+ DEBUG [864c2056] Command: [ -f /deploy/apps/blog/repo/HEAD ]
+ DEBUG [9a5717b1] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /deploy/apps/blog/repo
+ DEBUG [5ee43c8b] Running if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi as ubuntu@13.229.136.10
+ DEBUG [5ee43c8b] Command: if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [27256d6f] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [4334b2fb] Running /usr/bin/env git remote set-url origin git@github.com:kyhuuhai/api-rails-react-demo.git as ubuntu@13.229.136.10
+ DEBUG [4334b2fb] Command: cd /deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env git remote set-url origin git@github.com:kyhuuhai/api-rails-react-demo.git )
+  INFO [fa168aa1] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [13f97636] Running /usr/bin/env git remote update --prune as ubuntu@13.229.136.10
+ DEBUG [13f97636] Command: cd /deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [cc64a057] 	Fetching origin
+ DEBUG [cc64a057] 	
+ DEBUG [cc64a057] 	remote: Enumerating objects: 13, done.[K
+ DEBUG [cc64a057] 	
+ DEBUG [cc64a057] 	remote: Counting objects:   7% (1/13)   [K
+ DEBUG [cc64a057] 	remote: Counting objects:  15% (2/13)   [K
+ DEBUG [cc64a057] 	remote: Counting objects:  23% (3/13)  
+ DEBUG [cc64a057] 	 [K
+ DEBUG [cc64a057] 	remote: Counting objects:  30% (4/13)   [K
+ DEBUG [cc64a057] 	remote: Counting objects:  38% (5/13)   [K
+ DEBUG [cc64a057] 	remote: Counting objects:  46% (6/13)   [K
+ DEBUG [cc64a057] 	remote: Counting objects:  53% (7/1
+ DEBUG [cc64a057] 	3)   [K
+ DEBUG [cc64a057] 	remote: Counting objects:  61% (8/13)   [K
+ DEBUG [cc64a057] 	remote: Counting objects:  69% (9/13)   [K
+ DEBUG [cc64a057] 	remote: Counting objects:  76% (10/13)   [K
+ DEBUG [cc64a057] 	remote: Counting objects:  84%
+ DEBUG [cc64a057] 	 (11/13)   [K
+ DEBUG [cc64a057] 	remote: Counting objects:  92% (12/13)   [K
+ DEBUG [cc64a057] 	remote: Counting objects: 100% (13/13)   [K
+ DEBUG [cc64a057] 	remote: Counting objects: 100% (13/13), done.[K
+ DEBUG [cc64a057] 	
+ DEBUG [cc64a057] 	remote: Compressin
+ DEBUG [cc64a057] 	g objects:  33% (1/3)   [K
+ DEBUG [cc64a057] 	remote: Compressing objects:  66% (2/3)   [K
+ DEBUG [cc64a057] 	remote: Compressing objects: 100% (3/3)   [K
+ DEBUG [cc64a057] 	remote: Compressing objects: 100% (3/3), 
+ DEBUG [cc64a057] 	done.[K
+ DEBUG [cc64a057] 	
+ DEBUG [cc64a057] 	remote: Total 7 (delta 3), reused 7 (delta 3), pack-reused 0[K
+ DEBUG [cc64a057] 	
+ DEBUG [cc64a057] 	Unpacking objects:  14% (1/7)   
+ DEBUG [cc64a057] 	Unpacking objects:  28% (2/7)   
+ DEBUG [cc64a057] 	Unpacking objects:  42% (3/7)   
+ DEBUG [cc64a057] 	Unpacking objects:  57% (4/7)   
+ DEBUG [cc64a057] 	Unpacking objects:  71% (5/7)   
+ DEBUG [cc64a057] 	Unpacking objects:  85% (6/7)   
+ DEBUG [cc64a057] 	Unpacking objects: 100% (7/7)   
+ DEBUG [cc64a057] 	Unpacking objects: 100% (7/7), done.
+ DEBUG [cc64a057] 	
+ DEBUG [cc64a057] 	From github.com:kyhuuhai/api-rails-react-demo
+ DEBUG [cc64a057] 	
+ DEBUG [cc64a057] 	   07296b0..66dc9a6  master     -> master
+ DEBUG [cc64a057] 	
+  INFO [cc64a057] Finished in 4.451 seconds with exit status 0 (successful).
+ DEBUG [1ab3b017] Running if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi as ubuntu@13.229.136.10
+ DEBUG [1ab3b017] Command: if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [08c2b85b] Finished in 0.108 seconds with exit status 0 (successful).
+  INFO [cc5cac61] Running /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095100 as ubuntu@13.229.136.10
+ DEBUG [cc5cac61] Command: cd /deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095100 )
+  INFO [e7046f65] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [6f962648] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /deploy/apps/blog/releases/20190506095100 as ubuntu@13.229.136.10
+ DEBUG [6f962648] Command: cd /deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /deploy/apps/blog/releases/20190506095100 )
+  INFO [dc7d3f8e] Finished in 0.157 seconds with exit status 0 (successful).
+ DEBUG [8985e354] Running if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi as ubuntu@13.229.136.10
+ DEBUG [8985e354] Command: if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [dc4d2760] Finished in 0.153 seconds with exit status 0 (successful).
+ DEBUG [467473f9] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@13.229.136.10
+ DEBUG [467473f9] Command: cd /deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [bdce43fa] 	66dc9a69393804ef20112a49db109c77736f6a6b
+ DEBUG [bdce43fa] 	
+ DEBUG [bdce43fa] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [02ea6f8c] Running if test ! -d /deploy/apps/blog/releases/20190506095100; then echo "Directory does not exist '/deploy/apps/blog/releases/20190506095100'" 1>&2; false; fi as ubuntu@13.229.136.10
+ DEBUG [02ea6f8c] Command: if test ! -d /deploy/apps/blog/releases/20190506095100; then echo "Directory does not exist '/deploy/apps/blog/releases/20190506095100'" 1>&2; false; fi
+ DEBUG [c970fb57] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [4f08a40e] Running /usr/bin/env echo "66dc9a69393804ef20112a49db109c77736f6a6b" > REVISION as ubuntu@13.229.136.10
+ DEBUG [4f08a40e] Command: cd /deploy/apps/blog/releases/20190506095100 && /usr/bin/env echo "66dc9a69393804ef20112a49db109c77736f6a6b" > REVISION
+  INFO [b7be2b17] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [1cc178e8] Running /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095100/config as ubuntu@13.229.136.10
+ DEBUG [1cc178e8] Command: /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095100/config
+  INFO [9410f946] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [f92aa4a1] Running [ -L /deploy/apps/blog/releases/20190506095100/config/database.yml ] as ubuntu@13.229.136.10
+ DEBUG [f92aa4a1] Command: [ -L /deploy/apps/blog/releases/20190506095100/config/database.yml ]
+ DEBUG [ef750d98] Finished in 0.152 seconds with exit status 1 (failed).
+ DEBUG [d703994b] Running [ -f /deploy/apps/blog/releases/20190506095100/config/database.yml ] as ubuntu@13.229.136.10
+ DEBUG [d703994b] Command: [ -f /deploy/apps/blog/releases/20190506095100/config/database.yml ]
+ DEBUG [a5e75b4e] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [22189b46] Running /usr/bin/env rm /deploy/apps/blog/releases/20190506095100/config/database.yml as ubuntu@13.229.136.10
+ DEBUG [22189b46] Command: /usr/bin/env rm /deploy/apps/blog/releases/20190506095100/config/database.yml
+  INFO [bac9928d] Finished in 0.155 seconds with exit status 0 (successful).
+  INFO [e6ea70b5] Running /usr/bin/env ln -s /deploy/apps/blog/shared/config/database.yml /deploy/apps/blog/releases/20190506095100/config/database.yml as ubuntu@13.229.136.10
+ DEBUG [e6ea70b5] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/config/database.yml /deploy/apps/blog/releases/20190506095100/config/database.yml
+  INFO [f7875001] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [3b16ffdf] Running [ -L /deploy/apps/blog/releases/20190506095100/config/application.yml ] as ubuntu@13.229.136.10
+ DEBUG [3b16ffdf] Command: [ -L /deploy/apps/blog/releases/20190506095100/config/application.yml ]
+ DEBUG [05cb3019] Finished in 0.151 seconds with exit status 1 (failed).
+ DEBUG [d44e9ef0] Running [ -f /deploy/apps/blog/releases/20190506095100/config/application.yml ] as ubuntu@13.229.136.10
+ DEBUG [d44e9ef0] Command: [ -f /deploy/apps/blog/releases/20190506095100/config/application.yml ]
+ DEBUG [fdfa54a7] Finished in 0.174 seconds with exit status 1 (failed).
+  INFO [6c88d81f] Running /usr/bin/env ln -s /deploy/apps/blog/shared/config/application.yml /deploy/apps/blog/releases/20190506095100/config/application.yml as ubuntu@13.229.136.10
+ DEBUG [6c88d81f] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/config/application.yml /deploy/apps/blog/releases/20190506095100/config/application.yml
+  INFO [2fe28d6d] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [f281bde0] Running /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095100 /deploy/apps/blog/releases/20190506095100/tmp /deploy/apps/blog/releases/20190506095100/vendor /deploy/apps/blog/releases/20190506095100/public as ubuntu@13.229.136.10
+ DEBUG [f281bde0] Command: /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095100 /deploy/apps/blog/releases/20190506095100/tmp /deploy/apps/blog/releases/20190506095100/vendor /deploy/apps/blog/releases/20190506095100/public
+  INFO [c15a1673] Finished in 0.153 seconds with exit status 0 (successful).
+ DEBUG [ea016d36] Running [ -L /deploy/apps/blog/releases/20190506095100/log ] as ubuntu@13.229.136.10
+ DEBUG [ea016d36] Command: [ -L /deploy/apps/blog/releases/20190506095100/log ]
+ DEBUG [aaca3f6f] Finished in 0.152 seconds with exit status 1 (failed).
+ DEBUG [22605123] Running [ -d /deploy/apps/blog/releases/20190506095100/log ] as ubuntu@13.229.136.10
+ DEBUG [22605123] Command: [ -d /deploy/apps/blog/releases/20190506095100/log ]
+ DEBUG [4f4e78df] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [2d474888] Running /usr/bin/env rm -rf /deploy/apps/blog/releases/20190506095100/log as ubuntu@13.229.136.10
+ DEBUG [2d474888] Command: /usr/bin/env rm -rf /deploy/apps/blog/releases/20190506095100/log
+  INFO [84648e02] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [d695af53] Running /usr/bin/env ln -s /deploy/apps/blog/shared/log /deploy/apps/blog/releases/20190506095100/log as ubuntu@13.229.136.10
+ DEBUG [d695af53] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/log /deploy/apps/blog/releases/20190506095100/log
+  INFO [8407870c] Finished in 0.161 seconds with exit status 0 (successful).
+ DEBUG [3008ea13] Running [ -L /deploy/apps/blog/releases/20190506095100/tmp/pids ] as ubuntu@13.229.136.10
+ DEBUG [3008ea13] Command: [ -L /deploy/apps/blog/releases/20190506095100/tmp/pids ]
+ DEBUG [0d23dc97] Finished in 0.147 seconds with exit status 1 (failed).
+ DEBUG [de8fe77a] Running [ -d /deploy/apps/blog/releases/20190506095100/tmp/pids ] as ubuntu@13.229.136.10
+ DEBUG [de8fe77a] Command: [ -d /deploy/apps/blog/releases/20190506095100/tmp/pids ]
+ DEBUG [895bdb1a] Finished in 0.152 seconds with exit status 1 (failed).
+  INFO [4d22ae75] Running /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/releases/20190506095100/tmp/pids as ubuntu@13.229.136.10
+ DEBUG [4d22ae75] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/releases/20190506095100/tmp/pids
+  INFO [205ce3c8] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG [4436f218] Running [ -L /deploy/apps/blog/releases/20190506095100/tmp/cache ] as ubuntu@13.229.136.10
+ DEBUG [4436f218] Command: [ -L /deploy/apps/blog/releases/20190506095100/tmp/cache ]
+ DEBUG [c72e7c28] Finished in 0.151 seconds with exit status 1 (failed).
+ DEBUG [92187030] Running [ -d /deploy/apps/blog/releases/20190506095100/tmp/cache ] as ubuntu@13.229.136.10
+ DEBUG [92187030] Command: [ -d /deploy/apps/blog/releases/20190506095100/tmp/cache ]
+ DEBUG [26de22f7] Finished in 0.151 seconds with exit status 1 (failed).
+  INFO [974b452c] Running /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/releases/20190506095100/tmp/cache as ubuntu@13.229.136.10
+ DEBUG [974b452c] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/releases/20190506095100/tmp/cache
+  INFO [5b4538fa] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [e8202100] Running [ -L /deploy/apps/blog/releases/20190506095100/tmp/sockets ] as ubuntu@13.229.136.10
+ DEBUG [e8202100] Command: [ -L /deploy/apps/blog/releases/20190506095100/tmp/sockets ]
+ DEBUG [203a1650] Finished in 0.155 seconds with exit status 1 (failed).
+ DEBUG [7edc89e0] Running [ -d /deploy/apps/blog/releases/20190506095100/tmp/sockets ] as ubuntu@13.229.136.10
+ DEBUG [7edc89e0] Command: [ -d /deploy/apps/blog/releases/20190506095100/tmp/sockets ]
+ DEBUG [2e6c59c7] Finished in 0.154 seconds with exit status 1 (failed).
+  INFO [cf8b539e] Running /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/releases/20190506095100/tmp/sockets as ubuntu@13.229.136.10
+ DEBUG [cf8b539e] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/releases/20190506095100/tmp/sockets
+  INFO [9176d489] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [38e724b8] Running [ -L /deploy/apps/blog/releases/20190506095100/vendor/bundle ] as ubuntu@13.229.136.10
+ DEBUG [38e724b8] Command: [ -L /deploy/apps/blog/releases/20190506095100/vendor/bundle ]
+ DEBUG [25a281c9] Finished in 0.153 seconds with exit status 1 (failed).
+ DEBUG [53592377] Running [ -d /deploy/apps/blog/releases/20190506095100/vendor/bundle ] as ubuntu@13.229.136.10
+ DEBUG [53592377] Command: [ -d /deploy/apps/blog/releases/20190506095100/vendor/bundle ]
+ DEBUG [0ad8215b] Finished in 0.152 seconds with exit status 1 (failed).
+  INFO [a3e1c52f] Running /usr/bin/env ln -s /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/releases/20190506095100/vendor/bundle as ubuntu@13.229.136.10
+ DEBUG [a3e1c52f] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/releases/20190506095100/vendor/bundle
+  INFO [3a5ad5c2] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [148bb26b] Running [ -L /deploy/apps/blog/releases/20190506095100/public/system ] as ubuntu@13.229.136.10
+ DEBUG [148bb26b] Command: [ -L /deploy/apps/blog/releases/20190506095100/public/system ]
+ DEBUG [c2198837] Finished in 0.151 seconds with exit status 1 (failed).
+ DEBUG [44582c66] Running [ -d /deploy/apps/blog/releases/20190506095100/public/system ] as ubuntu@13.229.136.10
+ DEBUG [44582c66] Command: [ -d /deploy/apps/blog/releases/20190506095100/public/system ]
+ DEBUG [10eec53e] Finished in 0.151 seconds with exit status 1 (failed).
+  INFO [61a3da7f] Running /usr/bin/env ln -s /deploy/apps/blog/shared/public/system /deploy/apps/blog/releases/20190506095100/public/system as ubuntu@13.229.136.10
+ DEBUG [61a3da7f] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/public/system /deploy/apps/blog/releases/20190506095100/public/system
+  INFO [1309cf01] Finished in 0.156 seconds with exit status 0 (successful).
+ DEBUG [e80f66fb] Running [ -L /deploy/apps/blog/releases/20190506095100/public/uploads ] as ubuntu@13.229.136.10
+ DEBUG [e80f66fb] Command: [ -L /deploy/apps/blog/releases/20190506095100/public/uploads ]
+ DEBUG [aa748ed6] Finished in 0.152 seconds with exit status 1 (failed).
+ DEBUG [e6a058bd] Running [ -d /deploy/apps/blog/releases/20190506095100/public/uploads ] as ubuntu@13.229.136.10
+ DEBUG [e6a058bd] Command: [ -d /deploy/apps/blog/releases/20190506095100/public/uploads ]
+ DEBUG [f16dc45b] Finished in 0.150 seconds with exit status 1 (failed).
+  INFO [0a1d5540] Running /usr/bin/env ln -s /deploy/apps/blog/shared/public/uploads /deploy/apps/blog/releases/20190506095100/public/uploads as ubuntu@13.229.136.10
+ DEBUG [0a1d5540] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/public/uploads /deploy/apps/blog/releases/20190506095100/public/uploads
+  INFO [bb4ef756] Finished in 0.148 seconds with exit status 0 (successful).
+  INFO [d922240d] Running /usr/bin/env ln -s /deploy/apps/blog/releases/20190506095100 /deploy/apps/blog/releases/current as ubuntu@13.229.136.10
+ DEBUG [d922240d] Command: /usr/bin/env ln -s /deploy/apps/blog/releases/20190506095100 /deploy/apps/blog/releases/current
+  INFO [e6a26c0e] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO [f40c4f55] Running /usr/bin/env mv /deploy/apps/blog/releases/current /deploy/apps/blog as ubuntu@13.229.136.10
+ DEBUG [f40c4f55] Command: /usr/bin/env mv /deploy/apps/blog/releases/current /deploy/apps/blog
+  INFO [ec2108cb] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [988c6417] Running /usr/bin/env ls -x /deploy/apps/blog/releases as ubuntu@13.229.136.10
+ DEBUG [988c6417] Command: /usr/bin/env ls -x /deploy/apps/blog/releases
+ DEBUG [ef26eef6] 	20190506093557
+ DEBUG [ef26eef6] 		
+ DEBUG [ef26eef6] 	20190506093645
+ DEBUG [ef26eef6] 		
+ DEBUG [ef26eef6] 	20190506093945
+ DEBUG [ef26eef6] 		
+ DEBUG [ef26eef6] 	20190506094310
+ DEBUG [ef26eef6] 		
+ DEBUG [ef26eef6] 	20190506094612
+ DEBUG [ef26eef6] 	
+ DEBUG [ef26eef6] 	20190506095100
+ DEBUG [ef26eef6] 	
+ DEBUG [ef26eef6] Finished in 0.158 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 13.229.136.10
+ DEBUG [9e9c1bdd] Running [ -d /deploy/apps/blog/current ] as ubuntu@13.229.136.10
+ DEBUG [9e9c1bdd] Command: [ -d /deploy/apps/blog/current ]
+ DEBUG [8e881a76] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [580c41c2] Running /usr/bin/env readlink /deploy/apps/blog/current as ubuntu@13.229.136.10
+ DEBUG [580c41c2] Command: /usr/bin/env readlink /deploy/apps/blog/current
+ DEBUG [5249c692] 	/deploy/apps/blog/releases/20190506095100
+ DEBUG [5249c692] 	
+ DEBUG [5249c692] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [84558583] Running /usr/bin/env rm -rf /deploy/apps/blog/releases/20190506093557 as ubuntu@13.229.136.10
+ DEBUG [84558583] Command: /usr/bin/env rm -rf /deploy/apps/blog/releases/20190506093557
+  INFO [f394734e] Finished in 0.153 seconds with exit status 0 (successful).
+ DEBUG [a82c65f2] Running if test ! -d /deploy/apps/blog/releases; then echo "Directory does not exist '/deploy/apps/blog/releases'" 1>&2; false; fi as ubuntu@13.229.136.10
+ DEBUG [a82c65f2] Command: if test ! -d /deploy/apps/blog/releases; then echo "Directory does not exist '/deploy/apps/blog/releases'" 1>&2; false; fi
+ DEBUG [41171a60] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO [e7f64749] Running /usr/bin/env echo "Branch master (at 66dc9a69393804ef20112a49db109c77736f6a6b) deployed as release 20190506095100 by krylot" >> /deploy/apps/blog/revisions.log as ubuntu@13.229.136.10
+ DEBUG [e7f64749] Command: cd /deploy/apps/blog/releases && /usr/bin/env echo "Branch master (at 66dc9a69393804ef20112a49db109c77736f6a6b) deployed as release 20190506095100 by krylot" >> /deploy/apps/blog/revisions.log
+  INFO [7941fb79] Finished in 0.150 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-06 16:59:13 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [64177c44] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.229.136.10
+ DEBUG [64177c44] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2e3ba6dd] Finished in 0.746 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-blog-production-krylot.sh 0.0%
+  INFO Uploading /tmp/git-ssh-blog-production-krylot.sh 100.0%
+  INFO [e6652c61] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-krylot.sh as ubuntu@13.229.136.10
+ DEBUG [e6652c61] Command: /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-krylot.sh
+  INFO [7bacb9ad] Finished in 0.164 seconds with exit status 0 (successful).
+  INFO [aa2a8bd3] Running /usr/bin/env git ls-remote git@github.com:kyhuuhai/api-rails-react-demo.git HEAD as ubuntu@13.229.136.10
+ DEBUG [aa2a8bd3] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env git ls-remote git@github.com:kyhuuhai/api-rails-react-demo.git HEAD )
+ DEBUG [3b4186a4] 	66dc9a69393804ef20112a49db109c77736f6a6b
+ DEBUG [3b4186a4] 		HEAD
+  INFO [3b4186a4] Finished in 2.792 seconds with exit status 0 (successful).
+  INFO [c514cfa3] Running /usr/bin/env mkdir -p /deploy/apps/blog/shared /deploy/apps/blog/releases as ubuntu@13.229.136.10
+ DEBUG [c514cfa3] Command: /usr/bin/env mkdir -p /deploy/apps/blog/shared /deploy/apps/blog/releases
+  INFO [91c97f23] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [078e2ce7] Running /usr/bin/env mkdir -p /deploy/apps/blog/shared/log /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/shared/public/system /deploy/apps/blog/shared/public/uploads /deploy/apps/blog/shared/log /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/shared/public/system as ubuntu@13.229.136.10
+ DEBUG [078e2ce7] Command: /usr/bin/env mkdir -p /deploy/apps/blog/shared/log /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/shared/public/system /deploy/apps/blog/shared/public/uploads /deploy/apps/blog/shared/log /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/shared/public/system
+  INFO [f3559583] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO [3805f1c4] Running /usr/bin/env mkdir -p /deploy/apps/blog/shared/config as ubuntu@13.229.136.10
+ DEBUG [3805f1c4] Command: /usr/bin/env mkdir -p /deploy/apps/blog/shared/config
+  INFO [566ef622] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [d1ee996f] Running [ -f /deploy/apps/blog/shared/config/database.yml ] as ubuntu@13.229.136.10
+ DEBUG [d1ee996f] Command: [ -f /deploy/apps/blog/shared/config/database.yml ]
+ DEBUG [3c7712ac] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [10a953a5] Running [ -f /deploy/apps/blog/shared/config/application.yml ] as ubuntu@13.229.136.10
+ DEBUG [10a953a5] Command: [ -f /deploy/apps/blog/shared/config/application.yml ]
+ DEBUG [6e1d008c] Finished in 0.149 seconds with exit status 0 (successful).
+ DEBUG [ac6f7516] Running [ -f /deploy/apps/blog/current/REVISION ] as ubuntu@13.229.136.10
+ DEBUG [ac6f7516] Command: [ -f /deploy/apps/blog/current/REVISION ]
+ DEBUG [793524ad] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG [b40f12fc] Running /usr/bin/env cat /deploy/apps/blog/current/REVISION 2>/dev/null as ubuntu@13.229.136.10
+ DEBUG [b40f12fc] Command: /usr/bin/env cat /deploy/apps/blog/current/REVISION 2>/dev/null
+ DEBUG [be209c6c] 	66dc9a69393804ef20112a49db109c77736f6a6b
+ DEBUG [be209c6c] 	
+ DEBUG [be209c6c] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG [48c61b7d] Running [ -f /deploy/apps/blog/repo/HEAD ] as ubuntu@13.229.136.10
+ DEBUG [48c61b7d] Command: [ -f /deploy/apps/blog/repo/HEAD ]
+ DEBUG [ad15dc41] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /deploy/apps/blog/repo
+ DEBUG [cb6e76e5] Running if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi as ubuntu@13.229.136.10
+ DEBUG [cb6e76e5] Command: if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [f7359835] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [ad2ac159] Running /usr/bin/env git remote set-url origin git@github.com:kyhuuhai/api-rails-react-demo.git as ubuntu@13.229.136.10
+ DEBUG [ad2ac159] Command: cd /deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env git remote set-url origin git@github.com:kyhuuhai/api-rails-react-demo.git )
+  INFO [6f0aa477] Finished in 0.154 seconds with exit status 0 (successful).
+  INFO [145dc224] Running /usr/bin/env git remote update --prune as ubuntu@13.229.136.10
+ DEBUG [145dc224] Command: cd /deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [91a06f98] 	Fetching origin
+ DEBUG [91a06f98] 	
+  INFO [91a06f98] Finished in 2.846 seconds with exit status 0 (successful).
+ DEBUG [1df0283a] Running if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi as ubuntu@13.229.136.10
+ DEBUG [1df0283a] Command: if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [89c0220a] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [3eb5cd08] Running /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095918 as ubuntu@13.229.136.10
+ DEBUG [3eb5cd08] Command: cd /deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095918 )
+  INFO [71e2a7d6] Finished in 0.162 seconds with exit status 0 (successful).
+  INFO [7c19434a] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /deploy/apps/blog/releases/20190506095918 as ubuntu@13.229.136.10
+ DEBUG [7c19434a] Command: cd /deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /deploy/apps/blog/releases/20190506095918 )
+  INFO [24dd2395] Finished in 0.159 seconds with exit status 0 (successful).
+ DEBUG [5ed18fd4] Running if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi as ubuntu@13.229.136.10
+ DEBUG [5ed18fd4] Command: if test ! -d /deploy/apps/blog/repo; then echo "Directory does not exist '/deploy/apps/blog/repo'" 1>&2; false; fi
+ DEBUG [b7c190f3] Finished in 0.147 seconds with exit status 0 (successful).
+ DEBUG [c89b4290] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@13.229.136.10
+ DEBUG [c89b4290] Command: cd /deploy/apps/blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [2129c63d] 	66dc9a69393804ef20112a49db109c77736f6a6b
+ DEBUG [2129c63d] 	
+ DEBUG [2129c63d] Finished in 0.160 seconds with exit status 0 (successful).
+ DEBUG [fa08a499] Running if test ! -d /deploy/apps/blog/releases/20190506095918; then echo "Directory does not exist '/deploy/apps/blog/releases/20190506095918'" 1>&2; false; fi as ubuntu@13.229.136.10
+ DEBUG [fa08a499] Command: if test ! -d /deploy/apps/blog/releases/20190506095918; then echo "Directory does not exist '/deploy/apps/blog/releases/20190506095918'" 1>&2; false; fi
+ DEBUG [2d46c1e0] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [eb19dcf5] Running /usr/bin/env echo "66dc9a69393804ef20112a49db109c77736f6a6b" > REVISION as ubuntu@13.229.136.10
+ DEBUG [eb19dcf5] Command: cd /deploy/apps/blog/releases/20190506095918 && /usr/bin/env echo "66dc9a69393804ef20112a49db109c77736f6a6b" > REVISION
+  INFO [c96295b9] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [945921b2] Running /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095918/config as ubuntu@13.229.136.10
+ DEBUG [945921b2] Command: /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095918/config
+  INFO [6f64239b] Finished in 0.158 seconds with exit status 0 (successful).
+ DEBUG [67fa3dac] Running [ -L /deploy/apps/blog/releases/20190506095918/config/database.yml ] as ubuntu@13.229.136.10
+ DEBUG [67fa3dac] Command: [ -L /deploy/apps/blog/releases/20190506095918/config/database.yml ]
+ DEBUG [682ad867] Finished in 0.220 seconds with exit status 1 (failed).
+ DEBUG [61b04ce9] Running [ -f /deploy/apps/blog/releases/20190506095918/config/database.yml ] as ubuntu@13.229.136.10
+ DEBUG [61b04ce9] Command: [ -f /deploy/apps/blog/releases/20190506095918/config/database.yml ]
+ DEBUG [7c512b9c] Finished in 0.258 seconds with exit status 0 (successful).
+  INFO [ff752067] Running /usr/bin/env rm /deploy/apps/blog/releases/20190506095918/config/database.yml as ubuntu@13.229.136.10
+ DEBUG [ff752067] Command: /usr/bin/env rm /deploy/apps/blog/releases/20190506095918/config/database.yml
+  INFO [652ac0e1] Finished in 0.237 seconds with exit status 0 (successful).
+  INFO [3db928a2] Running /usr/bin/env ln -s /deploy/apps/blog/shared/config/database.yml /deploy/apps/blog/releases/20190506095918/config/database.yml as ubuntu@13.229.136.10
+ DEBUG [3db928a2] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/config/database.yml /deploy/apps/blog/releases/20190506095918/config/database.yml
+  INFO [b266efa2] Finished in 0.212 seconds with exit status 0 (successful).
+ DEBUG [f3d9aa23] Running [ -L /deploy/apps/blog/releases/20190506095918/config/application.yml ] as ubuntu@13.229.136.10
+ DEBUG [f3d9aa23] Command: [ -L /deploy/apps/blog/releases/20190506095918/config/application.yml ]
+ DEBUG [4e376330] Finished in 0.161 seconds with exit status 1 (failed).
+ DEBUG [cef85520] Running [ -f /deploy/apps/blog/releases/20190506095918/config/application.yml ] as ubuntu@13.229.136.10
+ DEBUG [cef85520] Command: [ -f /deploy/apps/blog/releases/20190506095918/config/application.yml ]
+ DEBUG [312ae06c] Finished in 0.176 seconds with exit status 1 (failed).
+  INFO [1d0deb8f] Running /usr/bin/env ln -s /deploy/apps/blog/shared/config/application.yml /deploy/apps/blog/releases/20190506095918/config/application.yml as ubuntu@13.229.136.10
+ DEBUG [1d0deb8f] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/config/application.yml /deploy/apps/blog/releases/20190506095918/config/application.yml
+  INFO [f179fd23] Finished in 0.161 seconds with exit status 0 (successful).
+  INFO [2823ea26] Running /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095918 /deploy/apps/blog/releases/20190506095918/tmp /deploy/apps/blog/releases/20190506095918/vendor /deploy/apps/blog/releases/20190506095918/public as ubuntu@13.229.136.10
+ DEBUG [2823ea26] Command: /usr/bin/env mkdir -p /deploy/apps/blog/releases/20190506095918 /deploy/apps/blog/releases/20190506095918/tmp /deploy/apps/blog/releases/20190506095918/vendor /deploy/apps/blog/releases/20190506095918/public
+  INFO [6b6a091c] Finished in 0.170 seconds with exit status 0 (successful).
+ DEBUG [8a6ff9ae] Running [ -L /deploy/apps/blog/releases/20190506095918/log ] as ubuntu@13.229.136.10
+ DEBUG [8a6ff9ae] Command: [ -L /deploy/apps/blog/releases/20190506095918/log ]
+ DEBUG [e2d1cce7] Finished in 0.163 seconds with exit status 1 (failed).
+ DEBUG [acad0787] Running [ -d /deploy/apps/blog/releases/20190506095918/log ] as ubuntu@13.229.136.10
+ DEBUG [acad0787] Command: [ -d /deploy/apps/blog/releases/20190506095918/log ]
+ DEBUG [45eafb57] Finished in 0.161 seconds with exit status 0 (successful).
+  INFO [4f58379e] Running /usr/bin/env rm -rf /deploy/apps/blog/releases/20190506095918/log as ubuntu@13.229.136.10
+ DEBUG [4f58379e] Command: /usr/bin/env rm -rf /deploy/apps/blog/releases/20190506095918/log
+  INFO [83e28f58] Finished in 0.162 seconds with exit status 0 (successful).
+  INFO [d337517d] Running /usr/bin/env ln -s /deploy/apps/blog/shared/log /deploy/apps/blog/releases/20190506095918/log as ubuntu@13.229.136.10
+ DEBUG [d337517d] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/log /deploy/apps/blog/releases/20190506095918/log
+  INFO [4c5f35b7] Finished in 0.165 seconds with exit status 0 (successful).
+ DEBUG [39d93600] Running [ -L /deploy/apps/blog/releases/20190506095918/tmp/pids ] as ubuntu@13.229.136.10
+ DEBUG [39d93600] Command: [ -L /deploy/apps/blog/releases/20190506095918/tmp/pids ]
+ DEBUG [cfd61a77] Finished in 0.158 seconds with exit status 1 (failed).
+ DEBUG [ea56a40c] Running [ -d /deploy/apps/blog/releases/20190506095918/tmp/pids ] as ubuntu@13.229.136.10
+ DEBUG [ea56a40c] Command: [ -d /deploy/apps/blog/releases/20190506095918/tmp/pids ]
+ DEBUG [60f5a33f] Finished in 0.156 seconds with exit status 1 (failed).
+  INFO [84e25131] Running /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/releases/20190506095918/tmp/pids as ubuntu@13.229.136.10
+ DEBUG [84e25131] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/releases/20190506095918/tmp/pids
+  INFO [1f242500] Finished in 0.158 seconds with exit status 0 (successful).
+ DEBUG [8be1bb47] Running [ -L /deploy/apps/blog/releases/20190506095918/tmp/cache ] as ubuntu@13.229.136.10
+ DEBUG [8be1bb47] Command: [ -L /deploy/apps/blog/releases/20190506095918/tmp/cache ]
+ DEBUG [2b697e61] Finished in 0.152 seconds with exit status 1 (failed).
+ DEBUG [b7d890eb] Running [ -d /deploy/apps/blog/releases/20190506095918/tmp/cache ] as ubuntu@13.229.136.10
+ DEBUG [b7d890eb] Command: [ -d /deploy/apps/blog/releases/20190506095918/tmp/cache ]
+ DEBUG [7ee30152] Finished in 0.152 seconds with exit status 1 (failed).
+  INFO [b06159b3] Running /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/releases/20190506095918/tmp/cache as ubuntu@13.229.136.10
+ DEBUG [b06159b3] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/releases/20190506095918/tmp/cache
+  INFO [7a2a9610] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [be08a7ac] Running [ -L /deploy/apps/blog/releases/20190506095918/tmp/sockets ] as ubuntu@13.229.136.10
+ DEBUG [be08a7ac] Command: [ -L /deploy/apps/blog/releases/20190506095918/tmp/sockets ]
+ DEBUG [b032c027] Finished in 0.149 seconds with exit status 1 (failed).
+ DEBUG [63a9db14] Running [ -d /deploy/apps/blog/releases/20190506095918/tmp/sockets ] as ubuntu@13.229.136.10
+ DEBUG [63a9db14] Command: [ -d /deploy/apps/blog/releases/20190506095918/tmp/sockets ]
+ DEBUG [63fdad13] Finished in 0.153 seconds with exit status 1 (failed).
+  INFO [687e94e6] Running /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/releases/20190506095918/tmp/sockets as ubuntu@13.229.136.10
+ DEBUG [687e94e6] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/releases/20190506095918/tmp/sockets
+  INFO [890eaaea] Finished in 0.155 seconds with exit status 0 (successful).
+ DEBUG [549099c1] Running [ -L /deploy/apps/blog/releases/20190506095918/vendor/bundle ] as ubuntu@13.229.136.10
+ DEBUG [549099c1] Command: [ -L /deploy/apps/blog/releases/20190506095918/vendor/bundle ]
+ DEBUG [b35c8367] Finished in 0.163 seconds with exit status 1 (failed).
+ DEBUG [b43c0ea9] Running [ -d /deploy/apps/blog/releases/20190506095918/vendor/bundle ] as ubuntu@13.229.136.10
+ DEBUG [b43c0ea9] Command: [ -d /deploy/apps/blog/releases/20190506095918/vendor/bundle ]
+ DEBUG [17eb513e] Finished in 0.155 seconds with exit status 1 (failed).
+  INFO [8d4b9b61] Running /usr/bin/env ln -s /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/releases/20190506095918/vendor/bundle as ubuntu@13.229.136.10
+ DEBUG [8d4b9b61] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/releases/20190506095918/vendor/bundle
+  INFO [b3429666] Finished in 0.152 seconds with exit status 0 (successful).
+ DEBUG [582e98e9] Running [ -L /deploy/apps/blog/releases/20190506095918/public/system ] as ubuntu@13.229.136.10
+ DEBUG [582e98e9] Command: [ -L /deploy/apps/blog/releases/20190506095918/public/system ]
+ DEBUG [2418ac04] Finished in 0.161 seconds with exit status 1 (failed).
+ DEBUG [fd422a63] Running [ -d /deploy/apps/blog/releases/20190506095918/public/system ] as ubuntu@13.229.136.10
+ DEBUG [fd422a63] Command: [ -d /deploy/apps/blog/releases/20190506095918/public/system ]
+ DEBUG [17e62a3e] Finished in 0.165 seconds with exit status 1 (failed).
+  INFO [f5e2de1e] Running /usr/bin/env ln -s /deploy/apps/blog/shared/public/system /deploy/apps/blog/releases/20190506095918/public/system as ubuntu@13.229.136.10
+ DEBUG [f5e2de1e] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/public/system /deploy/apps/blog/releases/20190506095918/public/system
+  INFO [6f89ee38] Finished in 0.175 seconds with exit status 0 (successful).
+ DEBUG [c26b889e] Running [ -L /deploy/apps/blog/releases/20190506095918/public/uploads ] as ubuntu@13.229.136.10
+ DEBUG [c26b889e] Command: [ -L /deploy/apps/blog/releases/20190506095918/public/uploads ]
+ DEBUG [18f010ab] Finished in 0.165 seconds with exit status 1 (failed).
+ DEBUG [7d7b75ac] Running [ -d /deploy/apps/blog/releases/20190506095918/public/uploads ] as ubuntu@13.229.136.10
+ DEBUG [7d7b75ac] Command: [ -d /deploy/apps/blog/releases/20190506095918/public/uploads ]
+ DEBUG [49eaf945] Finished in 0.162 seconds with exit status 1 (failed).
+  INFO [6e0ec525] Running /usr/bin/env ln -s /deploy/apps/blog/shared/public/uploads /deploy/apps/blog/releases/20190506095918/public/uploads as ubuntu@13.229.136.10
+ DEBUG [6e0ec525] Command: /usr/bin/env ln -s /deploy/apps/blog/shared/public/uploads /deploy/apps/blog/releases/20190506095918/public/uploads
+  INFO [f0154e2e] Finished in 0.164 seconds with exit status 0 (successful).
+ DEBUG [60cbfcc3] Running [ -L /deploy/apps/blog/releases/20190506095918/log ] as ubuntu@13.229.136.10
+ DEBUG [60cbfcc3] Command: [ -L /deploy/apps/blog/releases/20190506095918/log ]
+ DEBUG [6cd8f497] Finished in 0.162 seconds with exit status 0 (successful).
+ DEBUG [285104cd] Running [ -L /deploy/apps/blog/releases/20190506095918/tmp/pids ] as ubuntu@13.229.136.10
+ DEBUG [285104cd] Command: [ -L /deploy/apps/blog/releases/20190506095918/tmp/pids ]
+ DEBUG [ed3b680b] Finished in 0.165 seconds with exit status 0 (successful).
+ DEBUG [ff81faad] Running [ -L /deploy/apps/blog/releases/20190506095918/tmp/cache ] as ubuntu@13.229.136.10
+ DEBUG [ff81faad] Command: [ -L /deploy/apps/blog/releases/20190506095918/tmp/cache ]
+ DEBUG [2dd0f981] Finished in 0.167 seconds with exit status 0 (successful).
+ DEBUG [03305f94] Running [ -L /deploy/apps/blog/releases/20190506095918/tmp/sockets ] as ubuntu@13.229.136.10
+ DEBUG [03305f94] Command: [ -L /deploy/apps/blog/releases/20190506095918/tmp/sockets ]
+ DEBUG [094a9901] Finished in 0.163 seconds with exit status 0 (successful).
+ DEBUG [4328351f] Running [ -L /deploy/apps/blog/releases/20190506095918/vendor/bundle ] as ubuntu@13.229.136.10
+ DEBUG [4328351f] Command: [ -L /deploy/apps/blog/releases/20190506095918/vendor/bundle ]
+ DEBUG [a5eaa386] Finished in 0.205 seconds with exit status 0 (successful).
+ DEBUG [0f701248] Running [ -L /deploy/apps/blog/releases/20190506095918/public/system ] as ubuntu@13.229.136.10
+ DEBUG [0f701248] Command: [ -L /deploy/apps/blog/releases/20190506095918/public/system ]
+ DEBUG [67c0f1dc] Finished in 0.168 seconds with exit status 0 (successful).
+  INFO [f84e110f] Running /usr/bin/env ln -s /deploy/apps/blog/releases/20190506095918 /deploy/apps/blog/releases/current as ubuntu@13.229.136.10
+ DEBUG [f84e110f] Command: /usr/bin/env ln -s /deploy/apps/blog/releases/20190506095918 /deploy/apps/blog/releases/current
+  INFO [87877df8] Finished in 0.152 seconds with exit status 0 (successful).
+  INFO [500a9731] Running /usr/bin/env mv /deploy/apps/blog/releases/current /deploy/apps/blog as ubuntu@13.229.136.10
+ DEBUG [500a9731] Command: /usr/bin/env mv /deploy/apps/blog/releases/current /deploy/apps/blog
+  INFO [448cdeb0] Finished in 0.163 seconds with exit status 0 (successful).
+ DEBUG [72792d58] Running /usr/bin/env ls -x /deploy/apps/blog/releases as ubuntu@13.229.136.10
+ DEBUG [72792d58] Command: /usr/bin/env ls -x /deploy/apps/blog/releases
+ DEBUG [103b00e8] 	20190506093645
+ DEBUG [103b00e8] 		
+ DEBUG [103b00e8] 	20190506093945
+ DEBUG [103b00e8] 		
+ DEBUG [103b00e8] 	20190506094310
+ DEBUG [103b00e8] 		
+ DEBUG [103b00e8] 	20190506094612
+ DEBUG [103b00e8] 		
+ DEBUG [103b00e8] 	20190506095100
+ DEBUG [103b00e8] 	
+ DEBUG [103b00e8] 	20190506095918
+ DEBUG [103b00e8] 	
+ DEBUG [103b00e8] Finished in 0.156 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 13.229.136.10
+ DEBUG [42d247b7] Running [ -d /deploy/apps/blog/current ] as ubuntu@13.229.136.10
+ DEBUG [42d247b7] Command: [ -d /deploy/apps/blog/current ]
+ DEBUG [903f9570] Finished in 0.154 seconds with exit status 0 (successful).
+ DEBUG [ae6a6dac] Running /usr/bin/env readlink /deploy/apps/blog/current as ubuntu@13.229.136.10
+ DEBUG [ae6a6dac] Command: /usr/bin/env readlink /deploy/apps/blog/current
+ DEBUG [d8a6716c] 	/deploy/apps/blog/releases/20190506095918
+ DEBUG [d8a6716c] 	
+ DEBUG [d8a6716c] Finished in 0.165 seconds with exit status 0 (successful).
+  INFO [27052cbf] Running /usr/bin/env rm -rf /deploy/apps/blog/releases/20190506093645 as ubuntu@13.229.136.10
+ DEBUG [27052cbf] Command: /usr/bin/env rm -rf /deploy/apps/blog/releases/20190506093645
+  INFO [d5e88695] Finished in 0.154 seconds with exit status 0 (successful).
+ DEBUG [98775192] Running if test ! -d /deploy/apps/blog/releases; then echo "Directory does not exist '/deploy/apps/blog/releases'" 1>&2; false; fi as ubuntu@13.229.136.10
+ DEBUG [98775192] Command: if test ! -d /deploy/apps/blog/releases; then echo "Directory does not exist '/deploy/apps/blog/releases'" 1>&2; false; fi
+ DEBUG [9d975b82] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [d2677aaa] Running /usr/bin/env echo "Branch master (at 66dc9a69393804ef20112a49db109c77736f6a6b) deployed as release 20190506095918 by krylot" >> /deploy/apps/blog/revisions.log as ubuntu@13.229.136.10
+ DEBUG [d2677aaa] Command: cd /deploy/apps/blog/releases && /usr/bin/env echo "Branch master (at 66dc9a69393804ef20112a49db109c77736f6a6b) deployed as release 20190506095918 by krylot" >> /deploy/apps/blog/revisions.log
+  INFO [9c7a01d7] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-05-06 17:02:22 +0700 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [f693f9d3] Running /usr/bin/env mkdir -p /tmp as ubuntu@13.229.136.10
+ DEBUG [f693f9d3] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d5b3b36f] Finished in 0.818 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-blog-production-krylot.sh 0.0%
+  INFO Uploading /tmp/git-ssh-blog-production-krylot.sh 100.0%
+  INFO [69548101] Running /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-krylot.sh as ubuntu@13.229.136.10
+ DEBUG [69548101] Command: /usr/bin/env chmod 700 /tmp/git-ssh-blog-production-krylot.sh
+  INFO [c5e00255] Finished in 0.172 seconds with exit status 0 (successful).
+  INFO [2ed59f07] Running /usr/bin/env git ls-remote git@github.com:kyhuuhai/api-rails-react-demo.git HEAD as ubuntu@13.229.136.10
+ DEBUG [2ed59f07] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-blog-production-krylot.sh" ; /usr/bin/env git ls-remote git@github.com:kyhuuhai/api-rails-react-demo.git HEAD )
+ DEBUG [0b6a0b8f] 	66dc9a69393804ef20112a49db109c77736f6a6b
+ DEBUG [0b6a0b8f] 		HEAD
+  INFO [0b6a0b8f] Finished in 2.848 seconds with exit status 0 (successful).
+  INFO [4778647f] Running /usr/bin/env mkdir -p /deploy/apps/blog/shared /deploy/apps/blog/releases as ubuntu@13.229.136.10
+ DEBUG [4778647f] Command: /usr/bin/env mkdir -p /deploy/apps/blog/shared /deploy/apps/blog/releases
+  INFO [2140acc6] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [5dac92db] Running /usr/bin/env mkdir -p /deploy/apps/blog/shared/log /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/shared/public/system /deploy/apps/blog/shared/public/uploads /deploy/apps/blog/shared/log /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/shared/public/system as ubuntu@13.229.136.10
+ DEBUG [5dac92db] Command: /usr/bin/env mkdir -p /deploy/apps/blog/shared/log /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/shared/public/system /deploy/apps/blog/shared/public/uploads /deploy/apps/blog/shared/log /deploy/apps/blog/shared/tmp/pids /deploy/apps/blog/shared/tmp/cache /deploy/apps/blog/shared/tmp/sockets /deploy/apps/blog/shared/vendor/bundle /deploy/apps/blog/shared/public/system
+  INFO [3962a1c1] Finished in 0.166 seconds with exit status 0 (successful).
+  INFO [b95ea891] Running /usr/bin/env mkdir -p /deploy/apps/blog/shared/config as ubuntu@13.229.136.10
+ DEBUG [b95ea891] Command: /usr/bin/env mkdir -p /deploy/apps/blog/shared/config
+  INFO [1582c038] Finished in 0.170 seconds with exit status 0 (successful).
+ DEBUG [05f95706] Running [ -f /deploy/apps/blog/shared/config/database.yml ] as ubuntu@13.229.136.10
+ DEBUG [05f95706] Command: [ -f /deploy/apps/blog/shared/config/database.yml ]
+ DEBUG [8029a00a] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [d11c4926] Running [ -f /deploy/apps/blog/shared/config/application.yml ] as ubuntu@13.229.136.10
+ DEBUG [d11c4926] Command: [ -f /deploy/apps/blog/shared/config/application.yml ]
+ DEBUG [6c45eb5b] Finished in 0.180 seconds with exit status 0 (successful).
