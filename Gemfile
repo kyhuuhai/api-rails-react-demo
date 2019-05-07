@@ -20,11 +20,11 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   gem 'pry'
 
-  gem "capistrano", require: false
-  gem "capistrano3-puma", require: false
-  gem "capistrano-rails", require: false
-  gem "capistrano-bundler", require: false
-  gem 'rvm1-capistrano3', require: false
+    gem 'capistrano',         require: false
+    gem 'capistrano-rvm',     require: false
+    gem 'capistrano-rails',   require: false
+    gem 'capistrano-bundler', require: false
+    gem 'capistrano3-puma',   require: false
 end
 
 group :development do
