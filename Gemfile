@@ -7,7 +7,6 @@ gem 'rails', '~> 6.0.0.rc1'
 gem 'mysql2'
 
 gem 'rake'
-gem 'responders'
 gem 'jwt'
 gem 'rack-cors'
 gem 'puma', '~> 3.11'
