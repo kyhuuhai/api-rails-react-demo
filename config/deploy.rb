@@ -1,11 +1,13 @@
 set :repo_url, "git@github.com:kyhuuhai/api-rails-react-demo.git"
-set :application,     'blog'
+set :application, 'blog'
 
 # Don't change these unless you know what you're doing
-set :pty,             true
-set :use_sudo,        false
-set :stage,           :production
-set :deploy_via,      :remote_cache
+set :pty, true
+set :linked_files, %w(config/database.yml config/application.yml)
+set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads)
+set :keep_releases, 5
+set :rvm_type, :user
+
 set :puma_rackup, -> {File.join(current_path, "config.ru")}
 set :puma_state, -> {"#{shared_path}/tmp/pids/puma.state"}
 set :puma_pid, -> {"#{shared_path}/tmp/pids/puma.pid"}
@@ -19,7 +21,7 @@ set :puma_threads, [0, 8]
 set :puma_workers, 0
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true
-set :puma_preload_app, false  # Change to false when not using ActiveRecord
+set :puma_preload_app, true
 
 ## Defaults:
 # set :scm,           :git

@@ -72,9 +72,6 @@ GEM
     capistrano-rails (1.4.0)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
-    capistrano-rvm (0.1.2)
-      capistrano (~> 3.0)
-      sshkit (~> 1.2)
     capistrano3-puma (3.1.1)
       capistrano (~> 3.7)
       capistrano-bundler
@@ -155,10 +152,10 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    responders (2.4.1)
-      actionpack (>= 4.2.0, < 6.0)
-      railties (>= 4.2.0, < 6.0)
     ruby_dep (1.5.0)
+    rvm1-capistrano3 (1.4.0)
+      capistrano (~> 3.0)
+      sshkit (>= 1.2)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -196,7 +193,6 @@ DEPENDENCIES
   capistrano
   capistrano-bundler
   capistrano-rails
-  capistrano-rvm
   capistrano3-puma
   jbuilder (~> 2.5)
   jwt
@@ -207,7 +203,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 6.0.0.rc1)
   rake
-  responders
+  rvm1-capistrano3
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
