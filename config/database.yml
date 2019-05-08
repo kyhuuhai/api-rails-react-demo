@@ -20,7 +20,7 @@ staging:
   pool: 10
   reconnect: true
 
-staging:
+production:
   adapter: mysql2
   encoding: utf8mb4
   database: blog

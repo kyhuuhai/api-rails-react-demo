@@ -1,7 +1,7 @@
 
 
 # Don't change these unless you know what you're doing
-server "13.229.136.10", port: 8000, roles: [:web, :app, :db], primary: true
+server "13.229.136.10", roles: [:web, :app, :db], primary: true
 
 set :repo_url, "git@github.com:kyhuuhai/api-rails-react-demo.git"
 set :application, 'blog'
