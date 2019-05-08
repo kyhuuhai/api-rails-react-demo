@@ -9,7 +9,7 @@ gem 'mysql2'
 gem 'rake'
 gem 'jwt'
 gem 'rack-cors'
-gem 'puma', '~> 3.11'
+gem 'puma'
 
 gem 'jbuilder', '~> 2.5'
 
