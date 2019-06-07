@@ -1,7 +1,7 @@
 
 
 # Don't change these unless you know what you're doing
-server "13.229.136.10", roles: [:web, :app, :db], primary: true
+server "18.139.30.222", roles: [:web, :app, :db], primary: true
 
 set :repo_url, "git@github.com:kyhuuhai/api-rails-react-demo.git"
 set :application, 'blog'
@@ -78,9 +78,8 @@ namespace :deploy do
   before :starting,     :check_revision
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
-  after  :finishing,    :restart
 end
 
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
-# kill -s SIGTERM pid   # Stop puma
+# kill -s SIGTERM pid   # Stop puma 
